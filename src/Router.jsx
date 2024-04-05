@@ -11,16 +11,17 @@ const Router = () => {
     {
       path: "/",
       element: <Login />,
-      // errorElement: <ErrorPage />,
+      errorElement: <ErrorPage />,
     },
     {
       path: "/SignUp",
       element: <SignUp />,
-      // errorElement: <ErrorPage />,
+      errorElement: <ErrorPage />,
     },
     {
       path: "/chat",
       element: <Chat />,
+      errorElement: <ErrorPage />,
     },
   ]);
 
