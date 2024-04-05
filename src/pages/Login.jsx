@@ -1,5 +1,6 @@
 import Head from "../components/Head";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import '../styles/Login.css'
 import { useState } from "react";
 
@@ -7,6 +8,8 @@ import { useState } from "react";
 function Login() {
 
   const [message, setmessage] = useState('')
+
+  const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -33,7 +36,7 @@ function Login() {
         let token = response.token;
         localStorage.setItem("SavedToken", 'Bearer ' + token);
         console.log(response);
-        window.location.href = '/chat';
+        navigate('/chat');
       })
       .catch((err) => {
         console.log(err.toString());

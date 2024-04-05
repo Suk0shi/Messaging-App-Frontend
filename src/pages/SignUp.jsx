@@ -1,5 +1,5 @@
 import Head from "../components/Head";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import '../styles/Login.css'
 
 function SignUp() {
