@@ -145,7 +145,7 @@ function Chat() {
                 </div>
                 <div className="chatBackground">
                     <div className="chat" ref={scrollableDivRef}>
-                        <h2 className="selectedFriend">{selectedFriend}</h2>
+                        {selectedFriend ? <h2 className="selectedFriend">{selectedFriend}</h2> : <h2 className="selectedFriend">Select a friend to start chatting</h2>}
                         <div className="messages">
                           {messages.length ? messages.map((data) => (
                             <div key={data.user} className="message">
