@@ -11,17 +11,14 @@ const Router = () => {
     {
       path: "/",
       element: <Login />,
-      errorElement: <ErrorPage />,
     },
     {
       path: "/SignUp",
       element: <SignUp />,
-      errorElement: <ErrorPage />,
     },
     {
       path: "/chat",
       element: <Chat />,
-      errorElement: <ErrorPage />,
     },
   ]);
 
