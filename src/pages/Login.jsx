@@ -17,7 +17,7 @@ function Login() {
       const formData = new FormData(e.target);
       const payload = Object.fromEntries(formData);
       
-      fetch(`https://sukoshichat.adaptable.app/log-in`, {
+      fetch(`${import.meta.env.VITE_API_URL}/log-in`, {
         method: 'Post', 
         headers: {
           Accept: 'application/json',

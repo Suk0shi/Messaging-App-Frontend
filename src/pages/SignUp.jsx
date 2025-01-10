@@ -20,7 +20,7 @@ function SignUp() {
     
     if (passwordFormData.password === passwordFormData.confirmPassword) {
       setPasswordsMatch(true);
-      fetch(`https://sukoshichat.adaptable.app/signUp`, {
+      fetch(`${import.meta.env.VITE_API_URL}/signUp`, {
         method: 'Post', 
         headers: {
           Accept: 'application/json',

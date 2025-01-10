@@ -26,7 +26,7 @@ function Chat() {
     }, [messages]);
 
     useEffect(() => {
-        fetch(`https://sukoshichat.adaptable.app/friends`, {
+        fetch(`${import.meta.env.VITE_API_URL}/friends`, {
           mode: 'cors',
           headers: {
             'Authorization': `${localStorage.getItem('SavedToken')}`
@@ -49,7 +49,7 @@ function Chat() {
         
       useEffect(() => {
         if(selectedFriend){
-          fetch(`https://sukoshichat.adaptable.app/messages/${selectedFriend}`, {
+          fetch(`${import.meta.env.VITE_API_URL}/messages/${selectedFriend}`, {
             mode: 'cors',
             headers: {
               'Authorization': `${localStorage.getItem('SavedToken')}`
@@ -77,7 +77,7 @@ function Chat() {
       
       setInputValue('');
 
-      fetch(`https://sukoshichat.adaptable.app/${route}/${selectedFriend}`, {
+      fetch(`${import.meta.env.VITE_API_URL}/${route}/${selectedFriend}`, {
         method: 'Post', 
         headers: {
           'Authorization': `${localStorage.getItem('SavedToken')}`,
